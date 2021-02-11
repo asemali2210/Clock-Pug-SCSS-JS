@@ -1,0 +1,17 @@
+doctype 
+html 
+    head 
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Clock Pug - Css - Js
+        link(rel="stylesheet", href="style.css")
+    body
+        .clock 
+            video( type="video/mp4" autoplay muted loop id="bgVideo" class="bgVideo")  
+                source(src="/Pexels Videos 1720220.mp4")
+            .clock-border 
+                .hand.hour
+                .hand.min
+                .hand.sec
+                .center
+        script(src="script.js")

@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url("Pexels\ Videos\ 1720220.mp4");
+}
+
+.clock{
+    width: 100vw;
+    height: 100vh;
+    .bgVideo{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        filter: blur(2px);
+    }
+    .clock-border{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 3px solid #fff;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        position: relative;
+        .center{
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            z-index: 1000;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 142px;
+            right:  142px;
+        }
+        .hand{
+            $width: 85px;
+            width: $width;
+            background-color: #000;
+            position: absolute;
+            top: 50%;
+            right:  150px;
+            height: 6px;
+            transition: all 0.4s;
+            transform-origin: 100%;
+            transition-timing-function: cubic-bezier(0.1, 2.4, 0.55, 1);
+        }
+        .hand.sec{
+            background-color: red;
+            height: 4px;
+            width: 130px;
+        }
+        .hand.min{
+            width: 120px;
+        }
+    }
+}
